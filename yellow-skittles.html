@@ -78,9 +78,13 @@ canvas{width:100%;height:340px;display:block}
 .prompts h2{font:800 18px var(--display);margin:0 0 8px}
 .prompts ol{margin:0;padding-left:1.3em;display:grid;gap:6px;max-width:70ch}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.back{justify-self:start;display:inline-flex;align-items:center;gap:6px;font:600 14px var(--mono);color:var(--accent);text-decoration:none;padding:6px 10px;margin-left:-10px;border-radius:8px}
+.back:hover{text-decoration:underline;text-underline-offset:3px}
+.back:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 </style>
 
 <div class="wrap">
+  <a class="back" href="index.html">← All activity pages</a>
   <div class="eyebrow">GEA1000N · Sampling distributions · Simulation A</div>
   <article class="news" aria-label="News article">
     <div class="masthead"><span>In the news</span><span>Food &amp; Wine</span></div>
