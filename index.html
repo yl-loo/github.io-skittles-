@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yellow Skittles Activity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one narrow column — headline, short intro, three stacked link cards in activity order */
+:root{
+  --bg:#f7f6fa; --surface:#ffffff; --fg:#1f1b2b; --muted:#625b74; --line:#dcd8e6;
+  --accent:#5b3fa8; --yellow:#f2c500;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#16131f; --surface:#211d2d; --fg:#ece9f3; --muted:#a59fb8; --line:#3a3449;
+  --accent:#b79cff; --yellow:#f5cf2a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--body)}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:40px 56px;display:grid;gap:24px}
+.eyebrow{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(28px,6vw,42px)/1.05 var(--display);margin:0;text-wrap:balance}
+h1 em{font-style:normal;background:var(--yellow);color:#1f1b2b;padding:0 .18em;border-radius:6px}
+.lede{margin:0;max-width:62ch;color:var(--muted)}
+.list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.list a{display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:center;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+.list a:hover{border-color:var(--accent);transform:translateY(-1px)}
+.list a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.step{grid-row:span 2;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:700 16px var(--mono);background:var(--bg);border:1px solid var(--line)}
+.name{font:800 19px var(--display)}
+.desc{grid-column:2;font-size:15px;color:var(--muted)}
+.arrow{grid-row:1 / span 2;grid-column:3;font-size:20px;color:var(--accent)}
+footer{font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.list a{transition:none}.list a:hover{transform:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow">GEA1000N · Sampling distributions</div>
+  <h1>Is <em>yellow</em> really the least popular Skittle?</h1>
+  <p class="lede">Work through the pages in order. Simulate many samples of Skittles in each simulation, note what you see, then compare the two side by side.</p>
+  <ol class="list">
+    <li><a href="yellow-skittles.html">
+      <span class="step">A</span><span class="name">Simulation A</span>
+      <span class="desc">Draw samples of 14 or 56 Skittles and build the sampling distribution of p̂.</span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="yellow-skittles-b.html">
+      <span class="step">B</span><span class="name">Simulation B</span>
+      <span class="desc">Repeat the same steps in a second simulation and see what changes.</span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="yellow-skittles-ab.html">
+      <span class="step">A+B</span><span class="name">A and B compared</span>
+      <span class="desc">Both sampling distributions on the same axes, with 95% intervals at sample size 56.</span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>
+  </ol>
+  <footer>Each page runs in your own browser. Refreshing a simulation page clears your samples.</footer>
+</main>
+</body>
+</html>
